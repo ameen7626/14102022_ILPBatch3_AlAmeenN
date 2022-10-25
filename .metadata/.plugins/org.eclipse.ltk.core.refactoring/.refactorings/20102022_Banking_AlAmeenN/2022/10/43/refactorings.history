@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.bank.service.CustomerService.java&apos; to &apos;AccountService.java&apos;&#x0D;&#x0A;- Original project: &apos;20102022_UseCaseDiscussion_Jithin&apos;&#x0D;&#x0A;- Original element: &apos;com.bank.service.CustomerService.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.bank.service.AccountService.java&apos;" description="Rename compilation unit &apos;CustomerService.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.bank.service{CustomerService.java" name="AccountService.java" references="false" stamp="1666328193536" version="1.0"/>
+</session>

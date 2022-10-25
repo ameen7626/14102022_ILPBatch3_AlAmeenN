@@ -1,0 +1,58 @@
+package com.bank.utility;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.bank.entity.Customer;
+import com.bank.entity.Product;
+import com.bank.entity.Service;
+import com.bank.service.AccountService;
+import com.bank.service.BankService;
+
+public class BankUtility {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		ArrayList<Product> productList = new ArrayList<Product>();
+		ArrayList<Service> allServicesList = new ArrayList<Service>();
+		ArrayList<Customer> customers = new ArrayList<Customer>();
+		allServicesList=BankService.createServices();
+		productList = BankService.createProducts(allServicesList);
+		int choice;
+		char ch;
+		
+		do
+		{
+			System.out.println("****Welcome to Bank*****");
+			System.out.println("1.Create Account\n2.Display Accounts\n3.Exit");
+			System.out.println("Enter your choice");
+			AccountService accountService = new AccountService();
+			int serviceChoice=scanner.nextInt();
+			switch(serviceChoice) {
+			case 1 : customers=accountService.createAccount(customers);
+				break;
+			
+			}
+			System.out.println("Do you want to continue in the program? (y/n)");
+			choice=scanner.next().charAt(0);
+		}while(choice =='y');
+			
+			
+			}
+		
+		
+
+	
+		
+		
+//		for(Product product : productList)
+//		{
+//			System.out.println(product.getProductName());
+//			for(Service service : product.getServiceList())
+//			{
+//				System.out.println(service.getServiceName());
+//			}
+
+	}
+
+	

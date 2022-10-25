@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;EigthQuestion.java&apos; to &apos;CATCO_ILP_EXPERION/src/com.ilpexperion.assignment&apos;&#x0D;&#x0A;- Original project: &apos;CATCO_ILP_EXPERION_v1.0&apos;&#x0D;&#x0A;- Destination element: &apos;CATCO_ILP_EXPERION/src/com.ilpexperion.assignment&apos;&#x0D;&#x0A;- Original element: &apos;com.experion.assignment.EigthQuestion.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=CATCO_ILP_EXPERION/src&lt;com.ilpexperion.assignment" element1="/src&lt;com.experion.assignment{EigthQuestion.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1666630538438" units="1" version="1.0"/>
+</session>

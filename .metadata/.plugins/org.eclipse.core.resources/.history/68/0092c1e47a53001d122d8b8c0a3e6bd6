@@ -1,0 +1,67 @@
+package com.bank.utility;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.bank.entity.Account;
+import com.bank.entity.Customer;
+import com.bank.entity.Service;
+import com.bank.service.AccountService;
+import com.bank.service.BankService;
+
+public class BankUtility {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+//		ArrayList<Product> productList = new ArrayList<Product>();
+		ArrayList<Service> allServicesList = new ArrayList<Service>();
+		ArrayList<Customer> customers = new ArrayList<Customer>();
+		allServicesList = BankService.createServices(allServicesList);
+		
+//		productList = BankService.createProducts(allServicesList);
+
+		char choice
+
+		do {
+			System.out.println("****Welcome to Bank*****");
+			System.out.println("1.Create Account\n2.Display Accounts\n3.Exit");
+			System.out.println("Enter your choice");
+			AccountService accountService = new AccountService();
+			int serviceChoice = scanner.nextInt();
+			switch (serviceChoice) {
+			case 1:
+				customers = accountService.createAccount(customers, allServicesList);
+				break;
+			case 2:
+				for (Customer customer : customers) {
+
+					System.out.println("Customer Name:" + customer.getCustomerName());
+					System.out.println("Customer Id:" + customer.getCustomerId());
+					System.out.println("Accounts");
+					ArrayList<Account> accounts = customer.getAccountList();
+					for (Account account : accounts) {
+						System.out.println("Account code:" + account.getProductCode());
+						System.out.println("Account name:" + account.getProductName());
+						System.out.println("Account balance:" + account.getAccountBalance());
+						ArrayList<Service> services = account.getServiceList();
+						System.out.println("Services");
+						for (Service service : services) {
+							System.out.println(service.getServiceName());
+						}
+					}
+				}
+			}
+			System.out.println("Do you want to continue in the program? (y/n)");
+			choice = scanner.next().charAt(0);
+
+		} while (choice == 'y');
+	}
+}
+
+//		for(Product product : productList)
+//		{
+//			System.out.println(product.getProductName());
+//			for(Service service : product.getServiceList())
+//			{
+//				System.out.println(service.getServiceName());
+//			}
